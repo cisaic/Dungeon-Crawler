@@ -16,11 +16,9 @@ Anyway, enjoy the catastrophe.
 
 ## GAMEPLAY
 
-The theme of this room is the Room of Requirement from Harry Potter.
+The theme of this room is the Room of Requirement from Harry Potter. Inputs must be exact (I didn't have time to implement ignore case/accept variation)
 
-Inputs must be exact (I didn't have time to implement ignore case/accept variation)
-
-Valid commands:
+**Valid commands:**
 
 - PLAY
 	- QUIT
