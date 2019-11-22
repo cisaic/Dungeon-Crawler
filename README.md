@@ -39,9 +39,9 @@ Each condition generates a random number between varying intervals corresponding
 * Reducto: 1-20
 * ExpectoPatronum: 1-30
 
-The user has 10 attempts. After 5 attempts, the user "levels up" and the range decreases for each spell, so the change of succeeding increases
+The user has 10 attempts. After 5 attempts, the user "levels up" and the range decreases for each spell, so the chance of succeeding increases
 
-If the random number is 7 (the magic number) the spell succeeds, and the player is offered gold and mana from the room's resources
+If the random number generated = 7 (the magic number) the spell succeeds, and the player is offered gold and mana from the room's resources
 
 
 ## FEATURES
