@@ -32,7 +32,7 @@ DROP n
 EXIT
 ```
 
-*Boss/Challenge:*
+**Boss/Challenge:**
 
 Type in one of the three spells (4 if you count the AvadaKedavra Easter egg)
 Each condition generates a random number between varying intervals corresponding with the "difficulty" level of the spell
@@ -42,16 +42,16 @@ Each condition generates a random number between varying intervals corresponding
 * ExpectoPatronum: 1-30
 
 The user has 10 attempts. After 5 attempts, the user "levels up" and the range decreases for each spell, so the change of succeeding increases
+
 If the random number is 7 (the magic number) the spell succeeds, and the player is offered gold and mana from the room's resources
 
 
 ## FEATURES
 
-TERMINOLOGY:
+**TERMINOLOGY:**
 
-Inventory = User gold/mana
-
-Resources = Room gold/mana/occupancy
+* Inventory = User gold/mana
+* Resources = Room gold/mana/occupancy
 
 ## HTML/CSS
 
@@ -138,12 +138,10 @@ These are all bugs that can be avoided if you don't try to break the system (:
 
 *Gameplay:*
 
-If "n n" ex. (1 4) is entered at any time, the game accepts the value and makes the changes as if it were a win scenario
-Didn't have time to catch that
+If "n n" ex. (1 4) is entered at any time, the game accepts the value and makes the changes as if it were a win scenario. Didn't have time to catch that
 
 *DROP n, n>9*
-Page is rewritten to the iframe but nothing else changes
-Like above, didn't have time to catch this error
+Page is rewritten to the iframe but nothing else changes. Like above, didn't have time to catch this error
 
 *QUIT:*
 Command QUIT to exit spellcasting game doesn't clear DOM of iframe 
