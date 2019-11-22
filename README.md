@@ -115,13 +115,13 @@ If the random number generated = 7 (the magic number) the spell succeeds, and th
 		- Print the end screen
 
 ## DUMMY ROOM.HTML
----------------
+
 - Due to my amazing social skills, I didn't collaborate with anyone on this project, so nobody's room links to mine. I know the whole point was that all the rooms create a system, but let's pretend I'm just an isolated node
 - To make up for it, I created a dummy room that links to my transporter.py
 - My room does transport to someone else's, though
 
 ## TRANSPORTER.PY
---------------
+
 - Reads url and inventory values passed from form in prev room
 - Opens resources.csv, checks if room is occupied or not
 - If it is occupied, display submit form that sends usr back to initial url, passes inventory through POST
@@ -131,7 +131,7 @@ If the random number generated = 7 (the magic number) the spell succeeds, and th
 - I know my move buttons all go to the same place, but there's no time left
 
 ## BUGS
-----
+
 These are all bugs that can be avoided if you don't try to break the system (: 
 
 *Gameplay:*
@@ -149,5 +149,5 @@ Exit during gameplay executes exit but doesn't display proper screen
 
  
 ## TODO
-----
+
 - Modularize functions such as read file, write to csv, read input, etc
