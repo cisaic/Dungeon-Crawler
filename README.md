@@ -1,5 +1,5 @@
 # CONTENTS OF THIS FILE
----------------------
+
 
 * Introduction
 * Gameplay
@@ -7,18 +7,21 @@
 * Bugs
 
 ## INTRO
-------
+
 This is the final project for a software systems course I took. Instructions can be found in instructions.pdf
 
-I have decided to display this code on my account as evidence of my progress (and folly). I haven't formatted or edited this code since my submission, so although it may be difficult to read or replicate, I'd still like to document this as a marker of what it took to achieve. This was a course I foolishly neglected to attend, so I scrambled to learn C and python in the two weeks leading up to the deadline of this assignment (right before exams). Naturally, I finished going through the lectures the day before the due date, so I had about 24 hours to do a 2-3 person, 2 week project, by myself. Story of my freakin undergrad. And so commenced 4 days of straight coding (there were server issues on the actual due date, so I had a few extra days to submit). Anyway, enjoy the catastrophe.  
+I have decided to display this code on my account as evidence of my progress (and folly). I haven't formatted or edited this code since my submission, so although it may be difficult to read or replicate, I'd still like to document this as a marker of what it took to achieve. This was a course I foolishly neglected to attend, so I scrambled to learn C and python in the two weeks leading up to the deadline of this assignment (right before exams). Naturally, I finished going through the lectures the day before the due date, so I had about 24 hours to do a 2-3 person, 2 week project, by myself. Story of my freakin undergrad. And so commenced 4 days of straight coding (there were server issues on the actual due date, so I had a few extra days to submit). She ain't pretty, but she got the job done and I was able to submit, so that's really all that mattered in the end. 
+
+Anyway, enjoy the catastrophe.  
 
 ## GAMEPLAY
---------
+
 The theme of this room is the Room of Requirement from Harry Potter.
 
 Inputs must be exact (I didn't have time to implement ignore case/accept variation)
 
 Valid commands:
+```
 PLAY
 	QUIT
 	Expelliarmus
@@ -27,8 +30,9 @@ PLAY
 	n n (for win scenario)
 DROP n
 EXIT
+```
 
-Boss/Challenge:
+*Boss/Challenge:*
 
 Type in one of the three spells (4 if you count the AvadaKedavra Easter egg)
 Each condition generates a random number between varying intervals corresponding with the "difficulty" level of the spell
@@ -42,21 +46,22 @@ If the random number is 7 (the magic number) the spell succeeds, and the player 
 
 
 ## FEATURES
---------
 
 TERMINOLOGY:
+
 Inventory = User gold/mana
+
 Resources = Room gold/mana/occupancy
 
 ## HTML/CSS
---------
--Responsive layout
+
+- Responsive layout
 - col1: Instructions/List of commands
 - col2: Room image, text input form, and teleportation buttons
 - col3: Interaction column where printf responses from the game are printed (also used for debugging)
 
 ## JS
---
+
 - Dictates where the form target is based on the user input (evaluated using RegEx)
 - i.e. values in PLAY only write to the iframe in the Interaction Column. This way the entire room doesn't need to be rewritten on every input
 - Also hides the teleportation field during PLAY mode so the page doesn't need to be rewritten
@@ -65,9 +70,8 @@ Resources = Room gold/mana/occupancy
 
 
 ## GAME.C
-------
 
--spellHit(int hit, int count, char spelltype)
+- spellHit(int hit, int count, char spelltype)
 	- Returns boolean value if the spell was successful or not
 	- Takes random value assigned in main depending on user input
 	- If the 'hit' value == 7, print win messages
@@ -83,7 +87,7 @@ Resources = Room gold/mana/occupancy
 	- Overall win management (if user gold > 99, print win page)
 
 
--Main
+- Main
 	- Store POST content in char[] "userin". 
 	- Parse userin and break into values "spell" (command from user), "counts" (client side counter that keeps track of how many valid spells have been attempted), "inventory".
 	- Farther parse inventory and split into "gold"/"mana" values
@@ -92,22 +96,21 @@ Resources = Room gold/mana/occupancy
 
 
 ## ROOM.C
-------
+
 - isInt(charn[])
 	- For the DROP n command, checks if n is indeed a valid number
 
--Main
+- Main
+
 	- Store POST content in char[] "userin". 
 	- Parse userin and break into values "spell" (command from user), "counts" (client side counter that keeps track of how many valid spells have been attempted), "inventory".
 	- Farther parse inventory and split into "inventoryG"/"inventoryM" (i.e. gold/mana) values
 	- Reads the resource file and stores the values into "gold" and "mana"
-	
 	- if the command matches DROP n
 		- Check if deduction from inventory is valid
 		- If not, print page with msg that the user doesn't have enough gold
 		- If it is, deduct from inventory gold, and add appropriate mana
 		- If user inputs odd number ex. 3, only 2 gold is deducted from the inventory
-
 	- if the command matches EXIT
 		- Add user gold/mana to values in resources
 		- Create string with new gold,mana,occupancy value (occupancy = 0)
@@ -133,18 +136,19 @@ Resources = Room gold/mana/occupancy
 ----
 These are all bugs that can be avoided if you don't try to break the system (: 
 
-Gameplay:
+*Gameplay:*
+
 If "n n" ex. (1 4) is entered at any time, the game accepts the value and makes the changes as if it were a win scenario
 Didn't have time to catch that
 
-DROP n, n>9
+*DROP n, n>9*
 Page is rewritten to the iframe but nothing else changes
 Like above, didn't have time to catch this error
 
-QUIT:
+*QUIT:*
 Command QUIT to exit spellcasting game doesn't clear DOM of iframe 
 
-EXIT:
+*EXIT:*
 Exit during gameplay executes exit but doesn't display proper screen
 
  
