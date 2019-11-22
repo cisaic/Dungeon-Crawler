@@ -21,16 +21,16 @@ The theme of this room is the Room of Requirement from Harry Potter.
 Inputs must be exact (I didn't have time to implement ignore case/accept variation)
 
 Valid commands:
-```
-PLAY
-	QUIT
-	Expelliarmus
-	Reducto
-	ExpectoPatronum
-	n n (for win scenario)
-DROP n
-EXIT
-```
+
+- PLAY
+	- QUIT
+	- Expelliarmus
+	- Reducto
+	- ExpectoPatronum
+	- n n (for win scenario)
+- DROP n
+- EXIT
+
 
 **Boss/Challenge:**
 
