@@ -116,7 +116,7 @@ If the random number generated = 7 (the magic number) the spell succeeds, and th
 
 ## DUMMY ROOM.HTML
 
-- Due to my amazing social skills, I didn't collaborate with anyone on this project, so nobody's room links to mine. I know the whole point was that all the rooms create a system, but let's pretend I'm just an isolated node
+- Due to my amazing time management skills, I didn't collaborate with anyone on this project, so nobody's room links to mine. I know the whole point was that all the rooms create a system, but let's pretend I'm just an isolated node
 - To make up for it, I created a dummy room that links to my transporter.py
 - My room does transport to someone else's, though
 
