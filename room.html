@@ -1,0 +1,63 @@
+ <html>
+	<head>
+
+		<link rel="stylesheet" href="style.css">
+		<title> Room of Requirement </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="/~cisaic/room.js"></script>
+
+	</head>
+	<body>
+		<div class="col1">
+			<div class = "instr">
+				<h1> Commands </h1>
+				<p> <b>DROP n</b> : Drop n gold from your inventory. 2 gold = 1 mana </br>
+					<b>PLAY</b> : Start the spellcasting lesson</br>
+					<b>QUIT</b> : Stop the lesson</br>
+					<b>EXIT</b> : Drop everything in your inventory and leave the game </br>
+					<b>REFRESH</b> : Refresh the page
+				</p>
+			</div>
+			<div class ="instrGame">
+				<h1> How to play </h1>
+				<p> Today we will be learning three different spells. You win if your spell is successful. You have 10 attempts to cast any combination of the three options. Make sure to spell them exactly as they're written below (no pun intended) <br/>
+				<b>Expelliarmus</b> : (Easy) Defensive spell that disarms your opponents  <br/>
+				<b>Reducto</b> : (Medium) A curse that can be used to blast solid objects to pieces <br/>
+				<b>ExpectoPatronum</b> : (Hard) The only known defense against Dementors. Conjure your animal Patronus by thinking of the happiest memory you can. </p>
+			</div>
+		</div>
+		<div class="col2">
+			<h1 class = "title"> Room of Requirement </h1>
+			<img class = "room" src="rmreq.jpg">
+			<div class = "sandbox">
+
+				<form action = "http://cs.mcgill.ca/~syu47/room.html" class="transporter">
+					<input type = "hidden" name = "inventory" value="0,1">
+					<input type = "hidden" name = "url" value = "http://cs.mcgill.ca/~cisaic/room.html">
+					<input type = "submit" value = "NORTH" class="north cardinal">
+					<input type = "submit" value = "EAST" class="east cardinal">
+					<input type = "submit" value = "WEST" class="west cardinal">
+				</form>
+				
+				<form action = "/~cisaic/cgi-bin/room.cgi" method = "POST" accept-charset= "utf-8" name ="commandf" id = "#commandf" target="response">
+					<input type = "text" class = "command" name = "command">
+					<input type = "hidden" name = "count" value="0">
+					<input type = "hidden" name = "inventory" value = "0,1">
+					<input type = "submit" class = "submit" onclick = "return submitCom();">
+				</form>
+
+				<form action = "http://cs.mcgill.ca/~syu47/room.html" class="transporter">
+					<input type = "hidden" name = "inventory", value="0,1">
+					<input type = "hidden" name = "url" value = "http://cs.mcgill.ca/~cisaic/room.html">
+					<input type = "submit" value = "SOUTH" class="south cardinal">
+				</form>
+
+			</div>
+		</div>
+		<div class="col3">
+			<h1> Interaction </h1>
+			<iframe name="response" class="response"></iframe>
+		</div>
+	</body>
+</html>
+

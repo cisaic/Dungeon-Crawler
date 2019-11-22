@@ -1,0 +1,89 @@
+body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+.col1 , .col2 , .col3{
+	border: none;
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+}
+.col1, .col3{
+	width: 23%;
+}
+.col2 {
+	width: 50%;
+	text-align: center;
+}
+.room{
+	width: 100%;
+	margin-bottom:20px;
+}
+
+@media (max-width: 650px){
+	.col1 , .col2 , .col3 {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.cardinal{
+	padding: 10px 20px;
+	-webkit-border-radius: 25;
+ 	-moz-border-radius: 25;
+  	border-radius: 25px;
+  	background: black;
+  	color: #fff;
+  	border-width: 0;
+}
+
+.north , .south {
+	display: block;
+	margin:auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.east{
+	float: right;
+	display: inline block;
+	margin-right: 20px;
+}
+.west{
+	float: left;
+	display: inline-block;
+	margin-left: 20px;
+}
+.command{
+	display: inline-block;
+	width:40%;
+	height:30px;
+}
+.instrGame{
+	display:none;
+}
+.response{
+	border-style: none;
+	width:100%;
+	height: 90%;
+}
+.bg{
+	background-image:url(http://images6.fanpop.com/image/photos/32800000/Gryffindor-common-room-pottermore-32846512-500-375.jpg);
+	background-repeat:no-repeat;
+	height:100%;
+	background-position:center;
+	background-attachment:
+	fixed;
+	background-size:cover;
+}
+.bg2{
+	background-image:url(https://images.pottermore.com/bxd3o8b291gf/3sntY8PsdOu4kA4yO6yUUc/0eecf873972541f8aa08ccb988da575d/DoloresUmbridge_PM_B5C13M1_DoloresUmbridgeInHerOffice_Moment.jpg?w=1200);
+	background-repeat:no-repeat;
+	height:100%;
+	background-position:center;
+	background-attachment:
+	fixed;
+	background-size:cover;
+}
+
