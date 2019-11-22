@@ -134,18 +134,17 @@ If the random number generated = 7 (the magic number) the spell succeeds, and th
 
 These are all bugs that can be avoided if you don't try to break the system (: 
 
-*Gameplay:*
+**Gameplay:**
+* If "n n" ex. (1 4) is entered at any time, the game accepts the value and makes the changes as if it were a win scenario. Didn't have time to catch that
 
-If "n n" ex. (1 4) is entered at any time, the game accepts the value and makes the changes as if it were a win scenario. Didn't have time to catch that
+**DROP n, n>9**
+* Page is rewritten to the iframe but nothing else changes. Like above, didn't have time to catch this error
 
-*DROP n, n>9*
-Page is rewritten to the iframe but nothing else changes. Like above, didn't have time to catch this error
+**QUIT:**
+* Command QUIT to exit spellcasting game doesn't clear DOM of iframe 
 
-*QUIT:*
-Command QUIT to exit spellcasting game doesn't clear DOM of iframe 
-
-*EXIT:*
-Exit during gameplay executes exit but doesn't display proper screen
+**EXIT:**
+* Exit during gameplay executes exit but doesn't display proper screen
 
  
 ## TODO
